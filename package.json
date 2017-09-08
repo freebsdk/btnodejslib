@@ -1,0 +1,23 @@
+{
+  "name": "btnodejslib",
+  "version": "1.0.0",
+  "description": "Bithumb node.js easy api library",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valueinsight/btnodejslib.git"
+  },
+  "author": "Seokyoung Shin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valueinsight/btnodejslib/issues"
+  },
+  "homepage": "https://github.com/valueinsight/btnodejslib#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "request": "^2.81.0"
+  }
+}
