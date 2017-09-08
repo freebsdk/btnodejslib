@@ -1,7 +1,17 @@
-//
-// Bithumb easy api for Node.js 
-// Programmed by Seokyoung Shin (aceorb@gmail.com)
-//
+/*
+The software packages are provided “as is”. The original coder makes no warranties, 
+expressed or implied, and hereby disclaims and negates all other warranties, 
+including without limitation, implied warranties or conditions of merchantability, 
+fitness for a particular purpose, or non-infringement of intellectual property or 
+other violation of rights or lost of money related to cryptocurrencies trading. 
+Further, the original coder does not warrant or make any representations 
+concerning the accuracy, likely results, or reliability of the use of this software, 
+included lost of money related to cryptocurrencies trading due to the different settings 
+and configurations of this software the end-user is allowed to change.
+
+Bithumb easy api for Node.js 
+Programmed by Seokyoung Shin (aceorb@gmail.com)
+*/
 
 var bt_api_mod = require('./btapi.js');
 
