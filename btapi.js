@@ -109,6 +109,20 @@ BithumbApi.prototype.getBalance = function(currency, callback) {
 
 
 
+//trade_type : bid (buy), ask(sell)
+BithumbApi.prototype.cancel = function(currency, trade_type, order_id, callback) {
+    
+    if(trade_type != "bid" && trade_type != "ask") {
+        console.error("[cancel] invalid trade type. : "+trade_type);
+        callback('invalid_trade_type');
+        return;
+    }
+
+    this.callApi('trade/cancel', {currency:currency, type:trade_type, order_id:order_id});
+}
+
+
+
 
 module.exports = {
     BithumbApi : BithumbApi
