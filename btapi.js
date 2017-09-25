@@ -93,7 +93,7 @@ BithumbApi.prototype.callApi = function(end_point, param_obj, callback) {
 
 
 
-//callback(err, info_json_obj)
+//callback result : f(err, info_json_obj)
 BithumbApi.prototype.getAccount = function(currency, callback) {
     this.callApi('/info/account', {currency:currency}, callback);
 }
@@ -101,9 +101,16 @@ BithumbApi.prototype.getAccount = function(currency, callback) {
 
 
 
-//callback(err, info_json_obj)
+//callback result : f(err, info_json_obj)
 BithumbApi.prototype.getBalance = function(currency, callback) {
     this.callApi('/info/balance', {currency:currency}, callback);
+}
+
+
+
+//callback result : f(err, info_json_obj)
+BithumbApi.prototype.getWalletAdrs = function(currency, callback) {
+    this.callApi('/info/wallet_address', {currency:currency}, callback);
 }
 
 
@@ -118,7 +125,7 @@ BithumbApi.prototype.cancel = function(currency, trade_type, order_id, callback)
         return;
     }
 
-    this.callApi('trade/cancel', {currency:currency, type:trade_type, order_id:order_id}, callback);
+    this.callApi('/trade/cancel', {currency:currency, type:trade_type, order_id:order_id}, callback);
 }
 
 
