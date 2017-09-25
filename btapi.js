@@ -118,7 +118,7 @@ BithumbApi.prototype.cancel = function(currency, trade_type, order_id, callback)
         return;
     }
 
-    this.callApi('trade/cancel', {currency:currency, type:trade_type, order_id:order_id});
+    this.callApi('trade/cancel', {currency:currency, type:trade_type, order_id:order_id}, callback);
 }
 
 
