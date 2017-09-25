@@ -92,7 +92,7 @@ BithumbApi.prototype.callApi = function(end_point, param_obj, callback) {
 
 
 
-
+//get account information
 //callback result : f(err, info_json_obj)
 BithumbApi.prototype.getAccount = function(currency, callback) {
     this.callApi('/info/account', {currency:currency}, callback);
@@ -100,7 +100,7 @@ BithumbApi.prototype.getAccount = function(currency, callback) {
 
 
 
-
+//get balance information
 //callback result : f(err, info_json_obj)
 BithumbApi.prototype.getBalance = function(currency, callback) {
     this.callApi('/info/balance', {currency:currency}, callback);
@@ -121,6 +121,16 @@ BithumbApi.prototype.getWalletAdrs = function(currency, callback) {
 BithumbApi.prototype.getTicker = function(currency, callback) {
     this.callApi('/info/ticker', {currency:currency, payment_currency:'KRW'}, callback);
 }
+
+
+
+
+//sell or buy orders or ongoing orders
+//callback result : f(err, info_json_obj)
+BithumbApi.prototype.getOrders = function(currency, callback) {
+    this.callApi('/info/orders', {currency:currency}, callback);
+}
+
 
 
 
