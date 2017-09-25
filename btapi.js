@@ -107,7 +107,7 @@ BithumbApi.prototype.getBalance = function(currency, callback) {
 }
 
 
-
+//get wallt address
 //callback result : f(err, info_json_obj)
 BithumbApi.prototype.getWalletAdrs = function(currency, callback) {
     this.callApi('/info/wallet_address', {currency:currency}, callback);
@@ -116,6 +116,15 @@ BithumbApi.prototype.getWalletAdrs = function(currency, callback) {
 
 
 
+//get last transaction information
+//callback result : f(err, info_json_obj)
+BithumbApi.prototype.getTicker = function(currency, callback) {
+    this.callApi('/info/ticker', {currency:currency, payment_currency:'KRW'}, callback);
+}
+
+
+
+//cancel the placed order
 //trade_type : bid (buy), ask(sell)
 BithumbApi.prototype.cancel = function(currency, trade_type, order_id, callback) {
     
